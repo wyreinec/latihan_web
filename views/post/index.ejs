@@ -22,17 +22,19 @@
         <tbody>
             <% posts.forEach(post => { %>
                 <tr>
-                    <td><% post.id %></td>
-                    <td><% post.title %></td>
-                    <td><% post.content %></td>
+                    <td><%= post.id %></td>
+                    <td><%= post.title %></td>
+                    <td><%= post.content %></td>
                     <td>
                         <a href="/posts/<%= post.id %>/edit">
                             <button class="btn btn-primary">Edit</button>
                         </a>
+                        <a href="/posts/<%= post.id %>/delete">
+                            <button class="btn btn-danger">Delete</button>
+                        </a>   
                     </td>
-                    
                 </tr>
-            })
+            <%}); %>
         </tbody>
     </table>
   </div>

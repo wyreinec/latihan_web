@@ -3,7 +3,7 @@ module.exports = {
     index: async (req, res) => {
         const posts = await Post.findAll();
         return res.render('post/index', {
-            PermissionStatus
+            posts
         });
     },
     create: async (req, res) => {
